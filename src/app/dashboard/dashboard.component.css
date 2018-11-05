@@ -1,0 +1,504 @@
+agm-map {
+    height: 500px;
+  }
+
+
+  .margintopzero{
+	margin-top: 0px !important;
+}
+
+li{
+	cursor: pointer;
+}
+
+.activ_dsr .adRig{
+    float: left;
+}
+
+.hundred{
+	float: left;
+    width: 100%;
+}
+.bg{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.container{
+	max-width:1000px;
+	width: 100%;
+	margin: 0 auto;
+	
+}
+
+
+.Cont {
+    float: left;
+    width: 100%;
+}
+
+.Cont .main{
+	margin-left: 9%;
+
+}
+
+.map_g{
+	float: left;
+	width: 100%;
+
+}
+
+.dist_g{
+    float: left;
+    width: 100%;
+    height: 750px;
+
+}
+.dist_g h4{
+	font-size: 12px;
+	margin-bottom: 4px;
+}
+
+.dist_g p{
+	font-size: 11px;
+	color: #7d7373;
+
+}
+
+.dist_g li{
+	border-left: 3px solid #E3342F;
+}
+.dist_g li mat-card{
+	margin-bottom: 10px !important;
+	position: relative;
+}
+
+.dist_g li mat-card:active {
+	background-color: #E3342F;
+	border-color: #fff;
+	box-shadow: 0 5px #666;
+	transform: translateY(4px);
+	color: #fff;
+  }
+
+.WrapCheck {
+    float: left;
+	width: 100%;
+	margin-top: 16px;
+	padding-top: 12px;
+
+}
+
+.WrapCheck .inRight {
+    float: left;
+    width: 77%;
+    padding-bottom: 5px;
+}
+
+.WrapCheck .inLeft {
+    float: left;
+    width: 40px;
+    background: #fa6232;		
+    border-radius: 40px;
+    height: 40px;
+	margin-right: 4%;	
+	text-align: center;
+	position: relative;
+}
+.WrapCheck .inLeft > span{
+	position: absolute;
+	color: white;
+    top: 9px;
+    left: 8px;
+}
+.disTit span:last-child {
+	float: right;
+	margin-top: -12px;
+}
+
+.disTit span:first-child {
+	float: left;
+	width: 86%;
+
+}
+.ulG{
+    height: 720px;
+    overflow-y: auto;
+}
+
+.lef div{
+	float: left;
+	width: 40px;
+}
+
+ .disAd{
+	float: left;
+	width: 97%;
+} 
+.adLef {
+    float: left;
+    width: 80%;
+    font-size: 10px;
+    margin-top: 4px;
+    margin-bottom: 3px;
+}
+
+.adRig {
+    float: right;
+    text-align: center;
+    width: 14%;
+    margin-top: -10px;
+}
+
+.adRig span:first-child {
+    background: #449bdd;
+    width: 35px;
+    height: 35px;
+    border-radius: 35px;
+    text-align: center;
+    font-size: 10px;
+	font-weight: 100;    
+	display: block;
+    color: #fff;
+}
+.adRig span p{
+	color: #fff;
+    padding-top: 5px;
+}
+.adRig span i{
+	font-size: 9px;
+}
+
+.ShopPRo img{
+	width: 38px;
+    height: 38px;
+    border-radius: 100%;
+}
+
+.comboboxWrap {
+	float: left;
+	width: 100%;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+
+.clascomb{
+    float: left;
+    width: 29%;
+    margin-right: 20px;
+    margin-top: 9px;
+    position: relative;
+
+}
+.matCard.widLft {
+    float: left;
+    width: 94%;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+
+/* .paddbt_top{
+    padding-bottom: 5px !important;
+    padding-top: 5px !important;
+} */
+
+.clascomb .mat-form-field {
+    width: 71%;
+}
+.matCard{
+	box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+	transition: box-shadow 280ms cubic-bezier(.4,0,.2,1);
+    padding: 24px 0px;
+	border-radius: 2px;
+	background: #fff;
+	color: rgba(0,0,0,.87);
+	font-family: Roboto,"Helvetica Neue",sans-serif;
+
+}
+
+.datePic{
+	cursor: pointer;
+    position: absolute;
+    bottom: 19px;
+}
+
+.midWrap{
+	float: left;
+	width: 100%;
+}
+
+
+ul,li{
+	list-style: none;
+}
+.footwrap{
+    float: left;
+    width: 100%;
+    margin-top: 50px;
+    text-align: right;
+}
+
+.DSR_Wrap {
+    float: left;
+	width: 100%;
+}
+
+.DSR_Wrap li {
+    float: left;
+	margin-right: 10px;
+	float: left;
+	margin-right: 10px;
+	
+	background-color: #E3342F;
+    border-color: #e91e63;
+
+    color: #fff;
+    border-radius: 18px;
+    text-align: center;
+    font-size: 13px;
+	padding: 10px;
+	cursor: pointer;
+	box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+	transition: box-shadow 280ms cubic-bezier(.4,0,.2,1), -webkit-box-shadow 280ms cubic-bezier(.4,0,.2,1);
+	font-family: Roboto,"Helvetica Neue",sans-serif;
+	margin-bottom: 8px;
+
+}
+.magrBtm{
+	margin-bottom: 10px;
+}
+
+div.scrollmenu {
+	overflow-x: auto;
+    white-space: nowrap;
+    overflow-y: hidden;
+
+}
+
+div.scrollmenu .Card_dsr {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    margin-right: 15px;
+    color: #fff;
+    border-radius: 2px;
+    text-align: center;
+    font-size: 13px;
+    padding: 10px;
+    cursor: pointer;
+    -webkit-box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    transition: box-shadow 280ms cubic-bezier(.4,0,.2,1), -webkit-box-shadow 280ms cubic-bezier(.4,0,.2,1);
+    font-family: Roboto,"Helvetica Neue",sans-serif;
+    margin-bottom: 8px;
+    width: 132px;
+	position: relative;
+    border: 1px solid #e0dcdcbf;
+    height: 126px;
+    min-height: 104px;
+
+}
+div.scrollmenu .Card_dsr:active {	
+	box-shadow: 0 5px #666;
+	transform: translateY(4px);
+  }
+
+  .ShopPRo {
+    float: left;
+    width: 100%;
+	text-align: center;
+	margin-bottom: 8px; 
+
+}
+
+.activ_dsr {
+    float: right;
+    width: 100%;
+    text-align: right;
+}
+
+.ShopTit {
+    float: left;
+    width: 100%;
+    text-align: center;
+    color: #000;
+    font-weight: 500;
+    font-size: 11px;
+}
+
+
+div.scrollmenu .Card_dsr .img{
+	float: left;
+	text-align: center;
+	background-image: url('/assets/dsr_w.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 100%;
+	height: 50px;
+
+ }
+ div.scrollmenu .det {
+	float: left;
+    width: 100%;
+    text-align: center;
+    color: #878787;
+	margin-top: 3px;
+	font-size: 11px;
+}
+
+.ch_box{
+	float: right;
+	text-align: right;
+}
+.table-responsive{
+    overflow-x: hidden !important;
+}
+
+.comboboxWrap.margintopzero.matCard {
+    background: #FFE5BD;
+}
+.comboboxWrap.matCard.paddbt_top{
+    background: #FFE5BD;
+
+}
+.clascomb button{
+    margin-top: 14px;
+}
+
+.UpdateWrap{
+    border-radius: 2px;
+    background: #fff;
+    color: rgba(0,0,0,.87);
+    font-family: Roboto,"Helvetica Neue",sans-serif;
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.Left_upwrap {
+    float: left;
+    width: 27%;
+    margin-right: 7% !important;
+}
+
+.Rig_upwrap {
+    float: left;
+    width: 60%;
+}
+
+.centerLoader
+{
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+}
+
+
+.DSR_illWrap {
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+
+}
+
+.padd_0{
+ padding: 24px 0px;
+}
+.dis_list a{
+    height: auto !important;
+    border-bottom: 1px solid rgba(0,0,0,.12);
+}
+h4{
+    font-size: 12px;
+}
+.heiDis{
+  height: 500px;
+  overflow-y: auto;
+}
+
+.CheckIcn{
+    font-size: 15px;
+    color: #09a006;
+}
+.paddDis0{
+padding: 24px 10px; 
+
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: #000;
+    border-radius: 10px;
+    background-color: #00000038;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+}
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    cursor: pointer;
+
+}
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+
+}  
+
+h2 {
+    font-size: 14px;
+    font-weight: 600;
+    color:#666;
+}
+  
+#pagewrap {
+	padding: 5px;
+	width: 960px;
+	margin: 20px auto;
+}
+#header {
+    float: left;
+    width: 100%;
+}
+#content {
+	width: 600px;
+	float: right;
+}
+#sidebar {
+    width: 28%;
+    float: left;
+    margin-right: 2%;
+}
+#footer {
+	clear: both;
+}
+.aside{
+    float: left;
+    width: 100%;
+}
+.cont{
+    float: left;
+    width: 69.7%;
+}
+.dsrWraP{
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.mapWraP{
+    float: left;
+    width: 100%;
+
+}
+.TextWhite{
+    color: #000 !important;
+}
+
+
+

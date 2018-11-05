@@ -1,0 +1,155 @@
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header card-header-danger">
+                    <h4 class="card-title ">Select Date</h4>
+                    <!-- <p class="card-category"> Here is a subtitle for this table</p> -->
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <div class="row">
+                            <div class="col-md-3">
+
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput [matDatepicker]="dobpicker" placeholder="From" [(ngModel)]="Firstdate">
+                                    <mat-datepicker #dobpicker></mat-datepicker>
+                                    <mat-icon (click)="dobpicker.open()">date_range</mat-icon>
+                                    </mat-form-field>
+
+                            </div>
+                            <div class="col-md-3">
+                                    <mat-form-field class="example-full-width">
+                                            <input matInput [matDatepicker]="picker" placeholder="To" [(ngModel)]="Lastdate">
+                                            <mat-datepicker #picker></mat-datepicker>
+                                            <mat-icon (click)="picker.open()">date_range</mat-icon>
+                                    </mat-form-field>
+                            </div>
+                            <div class="col-md-3">
+                                <button mat-raised-button type="submit" (click)="load()" class="btn btn-danger pull-right">Load</button>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">
+                    <div class="card">
+                            <div class="card-header card-header-primary">
+                                    <h4 class="card-title">Distributor</h4>
+                            </div>
+                        <div class="card-body">
+                            
+                            <mat-nav-list class="dis_list">
+                                <a mat-list-item (click)="FilterMapByDistributor(i)" 
+                                *ngFor="let Dist of DistributorList; let i = index">
+                                <div class="WrapCheck">
+                                        <!-- [ngStyle]="{'background': getRandomColor()}" -->
+                                    <div class="inLeft" >
+                                        <span>{{Dist.DistributorTitle | uppercase |  slice:0:2}}</span>
+                                    </div>
+                                    <div class="inRight">
+                                        <div class="disTit">
+                                        <span><h4>{{Dist.DistributorTitle}}</h4></span>
+                                        <span>
+                                            <mat-icon class="CheckIcn" *ngIf="Dist.IsSelected">check_circle</mat-icon>
+                                        </span>
+                                        </div>
+                                        <div class="disAd">
+                                            <div class="addresWrap">
+                                                <div class="adLef">{{Dist.DistributorAddress}}</div>
+            
+                                                <div class="adRig">
+                                                <span>
+                                                    <p>{{Dist.DistributorTotalShops}}</p>
+                                                    <i>Shops</i>
+                                                </span>
+                                                </div>
+            
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </a>
+            
+                                </mat-nav-list>
+                                <mat-divider [vertical]="true"></mat-divider>
+
+                        </div>
+                    </div>
+        </div>
+        <div class="col-md-8">
+            <div class="card">
+                        <div class="card-header card-header-success">
+                            <h4 class="card-title ">DSR</h4>
+                            <!-- <p class="card-category"> Here is a subtitle for this table</p> -->
+                        </div>
+                        <div class="card-body">
+                            <div class="scrollmenu">
+                                <div (click)="FilterMap_Dsr(i)" class="Card_dsr" *ngFor="let DSR of DsrListFiltered; let i = index" >
+                                    <div class="activ_dsr">
+                                        <div class="adRig">
+                                            <span>
+                                              <p>{{DSR.DSRTotalShops}}</p>
+                                              <i>Shops</i>
+                                            </span>
+                                          </div>
+                                      <!-- <img *ngIf="DSR.IsSelected" class="img-responsive" src="../assets/gre_select.png">-->
+                                      <mat-icon class="CheckIcn" *ngIf="DSR.IsSelected">check_circle</mat-icon>
+                                    </div> 
+        
+                                    <div class="ShopPRo">
+                                            <mat-icon class="TextWhite">account_box</mat-icon>
+                                      <!-- <img  class="img-responsive" src="../assets/pro.png">-->
+                                    </div> 
+                                    <div class="ShopTit">
+                                        <span>{{i + 1}} {{DSR.DSRTitle | slice:0:10}}</span>
+                                        <span>{{DSR.DSRID}}</span>
+                                     
+                                    </div>
+                                    <div class="ShopAd">
+                                        <div class="det">
+                                            <p>{{DSR.DistributorTitle | slice:0:12 }}</p>
+                                        </div>
+                                    </div>
+                                  </div>
+                            </div>
+                        </div>
+            </div>
+            <div class="card">
+                <div class="card-header card-header-warning">
+                    <h4 class="card-title">Map</h4>
+                    <!-- <p class="card-category">Complete your profile</p> -->
+                </div>
+                <div class="card-body">
+                    <!-- Map -->
+                 <div>
+                                                                                                               
+                                                                                  <div *ngIf="_loading">
+                                                                                         <agm-map [latitude]="24.8607" [longitude]="67.0011" [zoom]="6">
+                                                                                             <agm-marker-cluster imagePath="https://googlemaps.github.io/js-marker-clusterer/images/m">
+                                                                                                 <agm-marker *ngFor="let post of _FilteredPostsArray$ | async; trackBy: trackByDsr let i = index" 
+                                                                                                 [latitude]="convertStringToNumber(post.Latitude)"
+                                                                                                 [longitude]="convertStringToNumber(post.Longitude)"
+                                                                                                 [label]="post.ShopTitle"
+                                                                                                 [openInfoWindow]="true"
+                                                                                                 >
+                                                                                             </agm-marker>
+                                                                                           </agm-marker-cluster>
+                                                                                         </agm-map>
+                                                                                  </div>
+                                                                               
+                    <!-- Map -->
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+  </div>
+</div>
+
