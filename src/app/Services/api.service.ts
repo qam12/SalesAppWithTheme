@@ -25,11 +25,3 @@ getPosts(fromDate: String, lastDate: String):Observable<MyNewInterface[]>{
 
 
 }
-
-// getPosts(fromDate: String, lastDate: String): Observable<MyNewInterface[]> {
-//     console.log(this.postsURL + fromDate + "/"+ lastDate);
-//      return this.http.get(this.postsURL + fromDate + "/"+ lastDate)
-//      .map((response: Response) => {
-//         return <MyNewInterface[]>response.json().tblData;
-//       });
-//  }
