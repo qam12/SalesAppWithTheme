@@ -3,7 +3,7 @@ import {CommonModule} from '@angular/common';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './components/components.module';
 import { AppComponent } from './app.component';
@@ -22,8 +22,10 @@ import { MaterialModule } from './material.module';
 import { AgmJsMarkerClustererModule } from '@agm/js-marker-clusterer';
 import { LoaderComponent } from './loader/loader.component';
 import { LoadercontentComponent } from './loadercontent/loadercontent.component';
+import { LoginComponent } from './login/login.component';
 
-
+import { AuthService } from './AuthServices/auth.service'
+import { AuthGuard } from './AuthServices/auth.guard';
 
 
 
@@ -33,7 +35,8 @@ import { LoadercontentComponent } from './loadercontent/loadercontent.component'
     AppComponent,
     AdminLayoutComponent,
     LoaderComponent,
-    LoadercontentComponent
+    LoadercontentComponent,
+    LoginComponent
   ],
 
   imports: [
@@ -54,7 +57,7 @@ import { LoadercontentComponent } from './loadercontent/loadercontent.component'
     LoadercontentComponent
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
-  providers: [],
+  providers: [AuthService,AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

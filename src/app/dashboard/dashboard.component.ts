@@ -87,8 +87,10 @@ export class DashboardComponent implements OnInit {
   // }
 
   getPosts(): void {
-    var fromDate: String = GlobalResources.ApplyDateFormat(this.Firstdate,'yyyy-MM-dd');
-    var toDate: String = GlobalResources.ApplyDateFormat(this.Lastdate,'yyyy-MM-dd');
+    // var fromDate: String = GlobalResources.ApplyDateFormat(this.Firstdate,'yyyy-MM-dd');
+    // var toDate: String = GlobalResources.ApplyDateFormat(this.Lastdate,'yyyy-MM-dd');
+    var fromDate: String = '2018-01-01';
+    var toDate: String = '2018-01-30';
       this.apiSerivce.getPosts(fromDate,toDate).
       subscribe(
         resultArray => {

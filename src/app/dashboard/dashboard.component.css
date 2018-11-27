@@ -501,4 +501,6 @@ h2 {
 }
 
 
-
+.Displaynone{
+    display: none !important;
+}

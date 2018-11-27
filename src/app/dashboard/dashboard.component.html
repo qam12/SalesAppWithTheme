@@ -1,10 +1,10 @@
 <div class="main-content">
   <div class="container-fluid">
       <div class="row">
-        <div class="col-md-12">
-            <div class="card">
+        <div class="col-md-12 Displaynone">
+            <div class="card ">
                 <div class="card-header card-header-danger">
-                    <h4 class="card-title ">Select Date</h4>
+                    <h4 class="card-title">Select Date</h4>
                     <!-- <p class="card-category"> Here is a subtitle for this table</p> -->
                 </div>
                 <div class="card-body">
@@ -38,7 +38,7 @@
 
       <div class="row">
         <div class="col-md-4">
-                    <div class="card">
+                    <div class="card Displaynone">
                             <div class="card-header card-header-primary">
                                     <h4 class="card-title">Distributor</h4>
                             </div>
@@ -82,8 +82,8 @@
                         </div>
                     </div>
         </div>
-        <div class="col-md-8">
-            <div class="card">
+        <div class="col-md-12">
+            <div class="card Displaynone">
                         <div class="card-header card-header-success">
                             <h4 class="card-title ">DSR</h4>
                             <!-- <p class="card-category"> Here is a subtitle for this table</p> -->
@@ -122,8 +122,13 @@
             </div>
             <div class="card">
                 <div class="card-header card-header-warning">
-                    <h4 class="card-title">Map</h4>
+                    <span>
+                        <h3 class="card-title">Shop Location</h3>
+                        <i class="material-icons">my_location</i>
+                    </span>
                     <!-- <p class="card-category">Complete your profile</p> -->
+                    <button  mat-raised-button type="submit" (click)="load()" class="btn btn-danger pull-right">View Shops Location</button>
+
                 </div>
                 <div class="card-body">
                     <!-- Map -->

@@ -17,7 +17,8 @@ private postsURL = '';
 constructor(private http: Http) {}
 
 getPosts(fromDate: String, lastDate: String):Observable<MyNewInterface[]>{
-    return this.http.get(this.postsURL + fromDate + "/"+ lastDate)
+    console.log(this.postsURL + fromDate + "/" + lastDate);
+    return this.http.get(this.postsURL + fromDate + "/" + lastDate)
     .map((response: Response)=>{
         return <MyNewInterface[]>response.json().tblData;
     });
