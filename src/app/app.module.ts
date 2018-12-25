@@ -26,6 +26,9 @@ import { LoginComponent } from './login/login.component';
 
 import { AuthService } from './AuthServices/auth.service'
 import { AuthGuard } from './AuthServices/auth.guard';
+import { UserinformationService } from './user-profile/shared/userinformation.service';
+import { HttpClientModule } from '@angular/common/http';
+import { LoginService } from './login/shared/login.service';
 
 
 
@@ -41,6 +44,8 @@ import { AuthGuard } from './AuthServices/auth.guard';
 
   imports: [
     BrowserAnimationsModule,
+    BrowserModule,
+    HttpClientModule,
     FormsModule,
     HttpModule,
     ComponentsModule,
@@ -57,7 +62,12 @@ import { AuthGuard } from './AuthServices/auth.guard';
     LoadercontentComponent
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
-  providers: [AuthService,AuthGuard],
+  providers: [
+    AuthService,
+    AuthGuard,
+    UserinformationService,
+    LoginService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

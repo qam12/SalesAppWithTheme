@@ -1,105 +1,114 @@
-<div class="main-content">
-  <div class="container-fluid">
-      <div class="row">
-          <div class="col-md-8">
-              <div class="card">
-                  <div class="card-header card-header-danger">
-                      <h4 class="card-title">Edit Profile</h4>
-                      <p class="card-category">Complete your profile</p>
-                  </div>
-                  <div class="card-body">
-                      <form>
-                          <div class="row">
-                              <div class="col-md-5">
-                                <mat-form-field class="example-full-width">
-                                    <input matInput placeholder="Company (disabled)" disabled>
-                                  </mat-form-field>
-                              </div>
-                              <div class="col-md-3">
-                                  <mat-form-field class="example-full-width">
-                                    <input matInput placeholder="Username">
-                                  </mat-form-field>
-                              </div>
-                              <div class="col-md-4">
-                                  <mat-form-field class="example-full-width">
-                                    <input matInput placeholder="Email address" type="email">
-                                  </mat-form-field>
-                              </div>
-                          </div>
-                          <div class="row">
-                              <div class="col-md-6">
-                                <mat-form-field class="example-full-width">
-                                  <input matInput placeholder="Fist Name" type="text">
-                                </mat-form-field>
-                              </div>
-                              <div class="col-md-6">
-                                <mat-form-field class="example-full-width">
-                                  <input matInput placeholder="Last Name" type="text">
-                                </mat-form-field>
-                              </div>
-                          </div>
-                          <div class="row">
-                              <div class="col-md-12">
-                                <mat-form-field class="example-full-width">
-                                  <input matInput placeholder="Adress" type="text">
-                                </mat-form-field>
-                              </div>
-                          </div>
-                          <div class="row">
-                              <div class="col-md-4">
-                                <mat-form-field class="example-full-width">
-                                  <input matInput placeholder="City" type="text">
-                                </mat-form-field>
-                              </div>
-                              <div class="col-md-4">
-                                <mat-form-field class="example-full-width">
-                                  <input matInput placeholder="Country" type="text">
-                                </mat-form-field>
-                              </div>
-                              <div class="col-md-4">
-                                <mat-form-field class="example-full-width">
-                                  <input matInput placeholder="Postal Code" type="text">
-                                </mat-form-field>
-                              </div>
-                          </div>
-                          <div class="row">
-                              <div class="col-md-12">
-                                <label>About Me</label>
-                                <mat-form-field class="example-full-width">
-                                   <textarea matInput placeholder="Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo."></textarea>
-                                 </mat-form-field>
-                                  <!-- <div class="form-group">
 
-                                      <div class="form-group">
-                                          <label class="bmd-label-floating"> Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.</label>
-                                          <textarea class="form-control" rows="5"></textarea>
-                                      </div>
-                                  </div> -->
-                              </div>
-                          </div>
-                          <button mat-raised-button type="submit" class="btn btn-danger pull-right">Update Profile</button>
-                          <div class="clearfix"></div>
-                      </form>
-                  </div>
-              </div>
-          </div>
-          <div class="col-md-4">
-              <div class="card card-profile">
-                  <div class="card-avatar">
-                      <a href="#pablo">
-                          <img class="img" src="../assets/img/faces/marc.jpg" />
-                      </a>
-                  </div>
-                  <div class="card-body">
-                      <h6 class="card-category text-gray">CEO / Co-Founder</h6>
-                      <h4 class="card-title">Alec Thompson</h4>
-                      <p class="card-description">
-                          Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
-                      </p>
-                      <a href="#pablo" class="btn btn-danger btn-round">Follow</a>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                    <h4 class="card-title pull-left">User Information</h4>
+                    <button mat-raised-button type="button" id="btn-AddNew" class="btn btn-warning pull-right" (click)="AddNewUser()">New</button>
+                    </div>
+                    
+                <mat-tab-group>        
+                    <mat-tab>
+                                <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead class=" text-primary">
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Login User Name</th>
+                                    <th>Email </th>
+                                    <th>Phone</th>
+                                    <th>EntryTime</th>
+                                    <th>&nbsp;</th>
+                                    <th>&nbsp;</th>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let user of userInformationService.ListUserInformation">
+                                        <td>{{user.id}}</td>
+                                        <td>{{user.name}}</td>
+                                        <td>{{user.loginUserName}}</td>
+                                        <td>{{user.email}}</td>
+                                        <td>{{user.phone}}</td> 
+                                        <td>{{user.entryTime | date:'dd-MMM-yyyy hh:mm a'}}</td>
+                                        <button class="btn btn-success" (click)="onEdit(user)">Edit</button>
+                                        <button class="btn btn-danger" (click)="onDelete(user.id)">Delete</button>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    </mat-tab>
+                    <mat-tab>
+                            <div class="card-body">
+                                    <form action="" #userInformationForm="ngForm" (ngSubmit)="onSubmit(userInformationForm)">
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                                <input type="hidden" class="form-control" id="Id" name="Id" #Id="ngModel" [(ngModel)]="userInformationService.SelectedUserInformation.Id">
+                                                <mat-form-field class="example-full-width">
+                                                    <input matInput placeholder="Company Code" id="CompanyId" name="CompanyId" #CompanyId="ngModel" [(ngModel)]="userInformationService.SelectedUserInformation.CompanyId">
+                                                </mat-form-field>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <mat-form-field class="example-full-width">
+                                                    <input matInput placeholder="Office Code" type="text" id="OfficeId" name="OfficeId" #OfficeId="ngModel" [(ngModel)]="userInformationService.SelectedUserInformation.OfficeId">
+                                                </mat-form-field>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <mat-form-field class="example-full-width">
+                                                    <input matInput placeholder="Name" id="Name" name="Name" #Name="ngModel" [(ngModel)]="userInformationService.SelectedUserInformation.Name">
+                                                </mat-form-field>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <mat-form-field class="example-full-width">
+                                                    <input matInput placeholder="User Role" type="text" id="UserRoleId" name="UserRoleId" #UserRoleId="ngModel" [(ngModel)]="userInformationService.SelectedUserInformation.UserRoleId">
+                                                </mat-form-field>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <mat-form-field class="example-full-width">
+                                                    <input matInput placeholder="Login User Name" type="text" id="LoginUserName" name="LoginUserName" #LoginUserName="ngModel" [(ngModel)]="userInformationService.SelectedUserInformation.LoginUserName">
+                                                </mat-form-field>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <mat-form-field class="example-full-width">
+                                                <input matInput placeholder="Password" type="password" id="Password" name="Password" #Password="ngModel" [(ngModel)]="userInformationService.SelectedUserInformation.Password">
+                                                </mat-form-field>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <mat-form-field class="example-full-width">
+                                                <input matInput placeholder="Email Address" type="email" id="Email" name="Email" #Email="ngModel" [(ngModel)]="userInformationService.SelectedUserInformation.Email">
+                                                </mat-form-field>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <mat-form-field class="example-full-width">
+                                                <input matInput placeholder="Phone No" type="text" id="Phone" name="Phone" #Phone="ngModel" [(ngModel)]="userInformationService.SelectedUserInformation.Phone">
+                                                </mat-form-field>
+                                            </div>
+                                            <div class="col-md-4">
+                                                    <mat-checkbox checked class="example-full-width" id="IsActive" name="IsActive" #IsActive="ngModel" [(ngModel)]="userInformationService.SelectedUserInformation.IsActive">
+                                                        Active
+                                                    </mat-checkbox>
+                                            </div>
+                                        </div>
+                                        
+                                        <button mat-raised-button type="submit" [disabled]="!userInformationForm.valid" class="btn btn-danger pull-right">Save</button>
+                                        <button mat-raised-button type="button" id="edit-cancel" class="btn btn-light pull-right" (click)="toggleEditProfile(userInformationForm)">Clear</button>
+                                        <button mat-raised-button type="button" id="edit-back" class="btn btn-warning pull-right" (click)="back()">Back</button>
+                                        <div class="clearfix"></div>
+                                    </form>
+                                </div>
+                    </mat-tab>
+                </mat-tab-group>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+ 
