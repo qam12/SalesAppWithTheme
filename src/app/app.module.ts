@@ -23,7 +23,15 @@ import { AgmJsMarkerClustererModule } from '@agm/js-marker-clusterer';
 import { LoaderComponent } from './loader/loader.component';
 import { LoadercontentComponent } from './loadercontent/loadercontent.component';
 
+<<<<<<< HEAD
 
+=======
+import { AuthService } from './AuthServices/auth.service'
+import { AuthGuard } from './AuthServices/auth.guard';
+import { UserinformationService } from './user-profile/shared/userinformation.service';
+import { HttpClientModule } from '@angular/common/http';
+import { LoginService } from './login/shared/login.service';
+>>>>>>> 9e4ea2257e0092e9ca530ce34996192b1a3600c8
 
 
 
@@ -38,6 +46,8 @@ import { LoadercontentComponent } from './loadercontent/loadercontent.component'
 
   imports: [
     BrowserAnimationsModule,
+    BrowserModule,
+    HttpClientModule,
     FormsModule,
     HttpModule,
     ComponentsModule,
@@ -54,7 +64,16 @@ import { LoadercontentComponent } from './loadercontent/loadercontent.component'
     LoadercontentComponent
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
+<<<<<<< HEAD
   providers: [],
+=======
+  providers: [
+    AuthService,
+    AuthGuard,
+    UserinformationService,
+    LoginService
+  ],
+>>>>>>> 9e4ea2257e0092e9ca530ce34996192b1a3600c8
   bootstrap: [AppComponent]
 })
 export class AppModule { }
