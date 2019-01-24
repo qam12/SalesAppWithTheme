@@ -1,98 +1,562 @@
 <div class="main-content">
   <div class="container-fluid">
-    <div class="card">
+    <div class="card ">
         <div class="card-header card-header-danger">
-            <h4 class="card-title">Material Dashboard Heading</h4>
-            <p class="card-category">Created using Roboto Font Family</p>
+            <h4 class="card-title">PJP</h4>
+            <!-- <p class="card-category"> Here is a subtitle for this table</p> -->
         </div>
         <div class="card-body">
-            <div id="typography">
-                <div class="card-title">
-                    <h2>Typography</h2>
-                </div>
+            <div class="table-responsive desResp">
                 <div class="row">
-                    <div class="tim-typo">
-                        <h1>
-                            <span class="tim-note">Header 1</span>The Life of Material Dashboard </h1>
+                    <div class="col-md-3">
+
+                            <!-- <mat-form-field class="example-full-width">
+                             <input matInput [matDatepicker]="dobpicker" placeholder="Date"
+                                 [(ngModel)]="Firstdate">
+                            <mat-datepicker #dobpicker></mat-datepicker>
+                            <mat-icon (click)="dobpicker.open()">date_range</mat-icon>
+                            </mat-form-field> -->
+
+                            <mat-form-field class="example-full-width">
+                              <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="dobpicker" placeholder="Date"
+                              [(ngModel)]="Firstdate">
+                              <mat-datepicker-toggle matSuffix [for]="dobpicker"></mat-datepicker-toggle>
+                              <mat-datepicker #dobpicker></mat-datepicker>
+                            </mat-form-field>
+
                     </div>
-                    <div class="tim-typo">
-                        <h2>
-                            <span class="tim-note">Header 2</span>The Life of Material Dashboard</h2>
-                    </div>
-                    <div class="tim-typo">
-                        <h3>
-                            <span class="tim-note">Header 3</span>The Life of Material Dashboard</h3>
-                    </div>
-                    <div class="tim-typo">
-                        <h4>
-                            <span class="tim-note">Header 4</span>The Life of Material Dashboard</h4>
-                    </div>
-                    <div class="tim-typo">
-                        <h5>
-                            <span class="tim-note">Header 5</span>The Life of Material Dashboard</h5>
-                    </div>
-                    <div class="tim-typo">
-                        <h6>
-                            <span class="tim-note">Header 6</span>The Life of Material Dashboard</h6>
-                    </div>
-                    <div class="tim-typo">
-                        <p>
-                            <span class="tim-note">Paragraph</span>
-                            I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at.</p>
-                    </div>
-                    <div class="tim-typo">
-                        <span class="tim-note">Quote</span>
-                        <blockquote class="blockquote">
-                            <p>
-                                I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at.
-                            </p>
-                            <small>
-                                Kanye West, Musician
-                            </small>
-                        </blockquote>
-                    </div>
-                    <div class="tim-typo">
-                        <span class="tim-note">Muted Text</span>
-                        <p class="text-muted">
-                            I will be the leader of a company that ends up being worth billions of dollars, because I got the answers...
-                        </p>
-                    </div>
-                    <div class="tim-typo">
-                        <span class="tim-note">Primary Text</span>
-                        <p class="text-primary">
-                            I will be the leader of a company that ends up being worth billions of dollars, because I got the answers... </p>
-                    </div>
-                    <div class="tim-typo">
-                        <span class="tim-note">Info Text</span>
-                        <p class="text-info">
-                            I will be the leader of a company that ends up being worth billions of dollars, because I got the answers... </p>
-                    </div>
-                    <div class="tim-typo">
-                        <span class="tim-note">Success Text</span>
-                        <p class="text-success">
-                            I will be the leader of a company that ends up being worth billions of dollars, because I got the answers... </p>
-                    </div>
-                    <div class="tim-typo">
-                        <span class="tim-note">Warning Text</span>
-                        <p class="text-warning">
-                            I will be the leader of a company that ends up being worth billions of dollars, because I got the answers...
-                        </p>
-                    </div>
-                    <div class="tim-typo">
-                        <span class="tim-note">Danger Text</span>
-                        <p class="text-danger">
-                            I will be the leader of a company that ends up being worth billions of dollars, because I got the answers... </p>
-                    </div>
-                    <div class="tim-typo">
-                        <h2>
-                            <span class="tim-note">Small Tag</span>
-                            Header with small subtitle
-                            <br>
-                            <small>Use "small" tag for the headers</small>
-                        </h2>
-                    </div>
+
+                    <div class="col-md-6">
+                        <button mat-raised-button type="submit" (click)="load()" class="btn btn-danger pull-right">Load</button>
+                      </div>
                 </div>
             </div>
         </div>
     </div>
+
+
+    <!-- DSR -->
+    <div *ngIf="_IsDataLoaded" class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <!-- <div class="card-header card-header-danger">
+                    <h4 class="card-title ">Simple Table</h4>
+                    <p class="card-category"> Here is a subtitle for this table</p>
+                </div> -->
+                <div class="card-body table-responsive">
+                    <div class="DSR_illWrap ">
+                        <!-- search box -->
+          
+                        <!-- title and checkbox -->
+                        <div class="titleDSR">
+                          <h6 class="magrBtm">DSR</h6>
+                          <mat-checkbox type="checkbox" [value]="true" [checked]="true" (click)="SelectAllDSR()">Select All</mat-checkbox>               
+                        </div>
+          
+                        <div class="scrollmenu">
+          
+                          <div (click)="FilterMap_Dsr(i)" class="Card_dsr" *ngFor="let DSR of DsrListFiltered; let i = index" >
+          
+                            <div>
+
+                            <!-- three counter -->
+                            <div class="fields">
+                              <ul>
+                                <li>
+                                  <button matTooltip="DSR Total Shops" matTooltipClass="tooltip-red" aria-label="Button that shows a red tooltip" class="round_red round_blue">
+                                    {{DSR.DSRTotalShops}}
+                                  </button>
+                                </li>
+                                <li>
+                                  <button matTooltip="DSR Invoiced Shop" matTooltipClass="tooltip-red" aria-label="Button that shows a red tooltip" class="round_red round_gree">
+                                    {{DSR.DSRInvoicedShops}}
+          
+                                  </button>
+                                </li>
+                                <li>
+          
+          
+                                  <button matTooltip="DSR No Invoiced Shop" matTooltipClass="tooltip-red" aria-label="Button that shows a red tooltip" class="round_red">
+                                    {{DSR.DSRNotInvoicedShops}}
+                                  </button>
+                                </li>
+                              </ul>
+                            </div>  
+                            <!-- three counter -->
+          
+                                <div class="activ_dsr" >
+                                  <img *ngIf="DSR.IsSelected" class="img-responsive" src="../assets/img/gre_select.png">
+                                </div>
+                                <div class="ShopPRo">
+                                  <img class="img-responsive" src="../assets/img/pro.png">
+                                </div>
+                                <div class="ShopTit">
+                                  <span>({{DSR.DSRCode}}) - {{DSR.DSRTitle | slice:0:10}}</span>
+                                  <span></span>
+                                </div>
+              
+                                <div class="ShopAd">
+                                  <div class="det">
+                                    <p>{{DSR.DistributorTitle | slice:0:12 }}</p>
+                                  </div>
+                                </div>
+                              </div>    
+                          </div>
+                        </div>
+                   </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+
+        <!-- Distribuor and Map -->
+
+
+    <div *ngIf="_IsDataLoaded" class="container-fluid">
+        <div class="row">
+          <div class="col-md-4">
+                        <div class="card card-profile">
+
+                           <div class="Left_upwrap">
+
+                    <div class="dist_g">
+                      <div>
+                      </div>
+        
+                      <div class="titleCheck">
+                        <h6 class="magrBtm">Distributors</h6>
+        
+                        <!-- <mat-checkbox type="checkbox" [value]="true" [checked]="true" (click)="SelectAllDistributor()">Select All</mat-checkbox> -->
+        
+                      </div>
+        
+        
+        
+                      <div class="ulG">
+                        <ul>
+                          <li (click)="FilterMapByDistributor(i)" *ngFor="let Dist of DistributorList; let i = index">
+                            
+                            <div class="WrapCheck">
+        
+                              <div class="inLeft">
+                                <span>{{Dist.DistributorTitle | uppercase | slice:0:2}}</span>
+                              </div>
+                              <div class="inRight">
+        
+                                <div class="fields">
+                                  <ul>
+                                    <li>
+                                      <button matTooltip="Total Distributor Shops" matTooltipClass="tooltip-red" aria-label="Button that shows a red tooltip" class="round_red round_blue">
+                                        {{Dist.DistributorTotalShops}}
+                                      </button>
+                                    </li>
+                                    <li>
+                                      <button matTooltip="Invoice Shops" matTooltipClass="tooltip-red" aria-label="Button that shows a red tooltip" class="round_red round_gree">
+                                        {{Dist.DistributorInvoicedShops}}
+                                      </button>
+                                    </li>
+        
+                                    <li>
+                                      <button matTooltip="No Invoice Shops" matTooltipClass="tooltip-red" aria-label="Button that shows a red tooltip" class="round_red">
+                                        {{Dist.DistributorNotInvoicedShops}}
+                                      </button>
+                                    </li>
+                                  </ul>
+                                </div>
+        
+                                <div class="disTit">
+                                  <span>
+                                    <h4>{{Dist.DistributorTitle}}</h4>
+                                  </span>
+                                  <span>
+                                    <img *ngIf="Dist.IsSelected" class="img-responsive" src="../assets/img/gre_select.png">
+                                  </span>
+                                </div>
+                                <div class="disAd">
+                                  <div class="addresWrap">
+                                    <div class="adLef">{{Dist.DistributorAddress}}</div>
+        
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+        
+                           </div>
+
+                        </div>
+          </div>
+
+          <div class="col-md-8">
+            <div class="card">
+              <!-- <div class="card-header card-header-primary">
+                <h4 class="card-title">Edit Profile</h4>
+                <p class="card-category">Complete your profile</p>
+              </div> -->
+              <div class="card-body">
+                <!-- Map -->
+                    <div class="map_g">
+                            <div *ngIf="_loading">
+            
+                              <agm-map [latitude]="24.8607" [longitude]="67.0011" [zoom]="6">
+            
+                                <div *ngIf="ShowDetailMap">
+                                    
+                                  <agm-marker *ngFor="let post of _FilteredPostsArray$ | async; trackBy: trackByShop let i = index" 
+                                    [latitude]="convertStringToNumber(post.Latitude)" [longitude]="convertStringToNumber(post.Longitude)"
+                                    [openInfoWindow]="true" [iconUrl]="post.Status!='N' ? '../assets/img/green-dot.png' : '../assets/img/red-dot.png'">
+                                    
+                                    <agm-info-window>
+                                        <h2>Transaction</h2>
+                                        <div>
+                                            <table>
+                                                <tr>
+                                                  <th>Address</th>
+                                                  <td >{{post.Address}}</td>
+                                                </tr>
+              
+                                                <tr>
+                                                  <th>
+                                                    Quantity
+                                                  </th>
+                                                  <td>
+                                                    {{post.Quantity}}
+                                                  </td>
+                                                </tr>
+              
+                                                <tr>
+                                                  <th>
+                                                    Sales Weight
+                                                  </th>
+                                                  <td>
+                                                    {{post.SalesWeight}}
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <th>
+                                                    Sales Ton
+                                                  </th>
+                                                  <td>
+                                                    {{post.SalesTonnage}}
+                                                  </td>
+                                                </tr>
+              
+                                                <tr>
+                                                  <th>
+                                                    Net Amount
+                                                  </th>
+                                                  <td>
+                                                    {{post.NetAmount}}
+                                                  </td>
+                                                </tr>
+              
+                                                <tr>
+                                                  <th>
+                                                    Sales Brand
+                                                  </th>
+                                                  <td>
+                                                    {{post.Brand}}
+                                                  </td>
+                                                </tr>
+              
+                                                <tr>
+                                                  <th>
+                                                    Invoice No.
+                                                  </th>
+                                                  <td>
+                                                    {{post.InvoiceNo1}}
+                                                  </td>
+                                                </tr>
+              
+                                              </table>
+                                        </div>
+
+                                      <!-- <div class="modal">
+                                        <div class="leftinn">
+                                          <img src="../assets/img/shops.png">
+                                        </div>
+                                        <div class="Rightinn">
+                                          <div class="pj_shopTitle">{{post.ShopTitle}}</div>
+                                          <div class="pj_address">
+                                            <table>
+                                              <tr>
+                                                <th>Address</th>
+                                                <td class="txt">{{post.Address}}</td>
+                                              </tr>
+            
+                                              <tr>
+                                                <th>
+                                                  Quantity
+                                                </th>
+                                                <td>
+                                                  {{post.Quantity}}
+                                                </td>
+                                              </tr>
+            
+                                              <tr>
+                                                <th>
+                                                  Sales Weight
+                                                </th>
+                                                <td>
+                                                  {{post.SalesWeight}}
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <th>
+                                                  Sales Ton
+                                                </th>
+                                                <td>
+                                                  {{post.SalesTonnage}}
+                                                </td>
+                                              </tr>
+            
+                                              <tr>
+                                                <th>
+                                                  Net Amount
+                                                </th>
+                                                <td>
+                                                  {{post.NetAmount}}
+                                                </td>
+                                              </tr>
+            
+                                              <tr>
+                                                <th>
+                                                  Sales Brand
+                                                </th>
+                                                <td>
+                                                  {{post.Brand}}
+                                                </td>
+                                              </tr>
+            
+                                              <tr>
+                                                <th>
+                                                  Invoice No.
+                                                </th>
+                                                <td>
+                                                  {{post.InvoiceNo1}}
+                                                </td>
+                                              </tr>
+            
+                                            </table>
+                                          </div>
+            
+                                        </div>
+            
+                                      </div> -->
+                                    </agm-info-window>
+            
+                                  </agm-marker>
+                                </div>
+            
+                                <div *ngIf="ShowDetailMap===false">
+                                  <agm-marker-cluster imagePath="https://googlemaps.github.io/js-marker-clusterer/images/m">
+                                   
+                                    <agm-marker *ngFor="let post of _FilteredPostsArray$ | async; trackBy: trackByShop let i = index" 
+                                    [latitude]="convertStringToNumber(post.Latitude)" [longitude]="convertStringToNumber(post.Longitude)"
+                                    [openInfoWindow]="true" [iconUrl]="post.Status!='N' ? '../assets/img/green-dot.png' : '../assets/img/red-dot.png'">
+                                    
+                                    <agm-info-window>
+                                        <h2>Transaction</h2>
+                                        <div>
+                                            <table>
+                                                <tr>
+                                                  <th>Address</th>
+                                                  <td >{{post.Address}}</td>
+                                                </tr>
+              
+                                                <tr>
+                                                  <th>
+                                                    Quantity
+                                                  </th>
+                                                  <td>
+                                                    {{post.Quantity}}
+                                                  </td>
+                                                </tr>
+              
+                                                <tr>
+                                                  <th>
+                                                    Sales Weight
+                                                  </th>
+                                                  <td>
+                                                    {{post.SalesWeight}}
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <th>
+                                                    Sales Ton
+                                                  </th>
+                                                  <td>
+                                                    {{post.SalesTonnage}}
+                                                  </td>
+                                                </tr>
+              
+                                                <tr>
+                                                  <th>
+                                                    Net Amount
+                                                  </th>
+                                                  <td>
+                                                    {{post.NetAmount}}
+                                                  </td>
+                                                </tr>
+              
+                                                <tr>
+                                                  <th>
+                                                    Sales Brand
+                                                  </th>
+                                                  <td>
+                                                    {{post.Brand}}
+                                                  </td>
+                                                </tr>
+              
+                                                <tr>
+                                                  <th>
+                                                    Invoice No.
+                                                  </th>
+                                                  <td>
+                                                    {{post.InvoiceNo1}}
+                                                  </td>
+                                                </tr>
+              
+                                              </table>
+                                        </div>
+
+                                      <!-- <div class="modal">
+                                        <div class="leftinn">
+                                          <img src="../assets/img/shops.png">
+                                        </div>
+                                        <div class="Rightinn">
+                                          <div class="pj_shopTitle">{{post.ShopTitle}}</div>
+                                          <div class="pj_address">
+                                            <table>
+                                              <tr>
+                                                <th>Address</th>
+                                                <td class="txt">{{post.Address}}</td>
+                                              </tr>
+            
+                                              <tr>
+                                                <th>
+                                                  Quantity
+                                                </th>
+                                                <td>
+                                                  {{post.Quantity}}
+                                                </td>
+                                              </tr>
+            
+                                              <tr>
+                                                <th>
+                                                  Sales Weight
+                                                </th>
+                                                <td>
+                                                  {{post.SalesWeight}}
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <th>
+                                                  Sales Ton
+                                                </th>
+                                                <td>
+                                                  {{post.SalesTonnage}}
+                                                </td>
+                                              </tr>
+            
+                                              <tr>
+                                                <th>
+                                                  Net Amount
+                                                </th>
+                                                <td>
+                                                  {{post.NetAmount}}
+                                                </td>
+                                              </tr>
+            
+                                              <tr>
+                                                <th>
+                                                  Sales Brand
+                                                </th>
+                                                <td>
+                                                  {{post.Brand}}
+                                                </td>
+                                              </tr>
+            
+                                              <tr>
+                                                <th>
+                                                  Invoice No.
+                                                </th>
+                                                <td>
+                                                  {{post.InvoiceNo1}}
+                                                </td>
+                                              </tr>
+            
+                                            </table>
+                                          </div>
+            
+                                        </div>
+            
+                                      </div> -->
+                                    </agm-info-window>
+            
+                                  </agm-marker>
+                                    
+                                  </agm-marker-cluster>
+                                </div>
+                              </agm-map>
+                            </div>
+            
+                            <div class="MapBtns">
+            
+                              <mat-radio-group class="inv_btn">
+            
+                                <div class="chec_counter">
+                                  <mat-radio-button value="1" (click)="setFilterMode('A')" checked="checked"
+                                  matTooltip="Total Shops"
+                                  aria-label="Button"
+                                  >
+                                  All Shops
+                                </mat-radio-button>
+                                  <span>{{totalFilteredShops}}</span>
+                                </div>
+            
+                                <div class="chec_counter">
+                                  <mat-radio-button value="2" (click)="setFilterMode('I')"
+                                  matTooltip="Total Invoice Shops"
+                                  aria-label="Button"
+                                  >
+                                  Invoiced Shops
+                                </mat-radio-button>
+                                  <span>{{totalFilteredInvoicedShops}}</span>
+                                </div>
+            
+                                <div class="chec_counter">
+                                  <mat-radio-button value="3" (click)="setFilterMode('N')"
+                                  matTooltip="Total No Invoice Shops"
+                                  aria-label="Button"
+                                  >
+                                 Not Invoiced Shops
+                                </mat-radio-button>
+                                  <span>{{totalFilteredNotInvoicedShops}}</span>
+                                </div>
+            
+                              </mat-radio-group>
+            
+                              <div class="Viewoption">
+                                <mat-radio-group class="det_btn">
+                                  <mat-radio-button value="5" (click)="MapMode(false)" checked="checked">Summary</mat-radio-button>
+                                  <mat-radio-button value="6" (click)="MapMode(true)" >Detail</mat-radio-button>
+                                </mat-radio-group>
+                              </div>
+                            </div>  
+            
+                    </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
 </div>
+<!-- <table class="table table-hover"> -->
+

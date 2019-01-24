@@ -1,29 +1,98 @@
 
 <div class="main-content">
-  <div class="container-fluid">
-      <div class="card card-plain">
-          <div class="card-header card-header-danger">
-              <h4 class="card-title">Material Design Icons</h4>
-              <p class="card-category">Handcrafted by our friends from
-                  <a target="_blank" href="https://design.google.com/icons/">Google</a>
-              </p>
-          </div>
-          <div class="row">
-              <div class="col-md-12">
-                  <div class="card-body">
-                      <div class="iframe-container d-none d-lg-block">
-                          <iframe src="https://design.google.com/icons/">
-                              <p>Your browser does not support iframes.</p>
-                          </iframe>
+        <div class="container-fluid">
+      
+              <div class="card ">
+                      <div class="card-header card-header-danger">
+                          <h4 class="card-title">PJP</h4>
+                          <!-- <p class="card-category"> Here is a subtitle for this table</p> -->
                       </div>
-                      <div class="col-md-12 d-none d-sm-block d-md-block d-lg-none d-block d-sm-none text-center ml-auto mr-auto">
-                          <h5>The icons are visible on Desktop mode inside an iframe. Since the iframe is not working on Mobile and Tablets please visit the icons on their original page on Google. Check the
-                              <a href="https://design.google.com/icons/" target="_blank">Material Icons</a>
-                          </h5>
+                      <div class="card-body">
+                          <div class="table-responsive desResp">
+                              <div class="row">
+                                  <div class="col-md-3">
+              
+                                          <!-- <mat-form-field class="example-full-width">
+                                           <input matInput [matDatepicker]="dobpicker" placeholder="Date"
+                                               [(ngModel)]="Firstdate">
+                                          <mat-datepicker #dobpicker></mat-datepicker>
+                                          <mat-icon (click)="dobpicker.open()">date_range</mat-icon>
+                                          </mat-form-field> -->
+              
+                                          <!-- <mat-form-field class="example-full-width">
+                                                  <input matInput [matDatepicker]="dobpicker" placeholder="Date" [(ngModel)]="Firstdate" required>
+                                                  <mat-datepicker #dobpicker></mat-datepicker>
+                                                </mat-form-field>
+                                                <img class="datePic" (click)="dobpicker.open()" src="../assets/calend.png"> -->
+              
+                                  </div>
+                                  <div class="col-md-3">
+              
+                                          <!-- <mat-form-field>
+                                                  <mat-select placeholder="Select UserName" [formControl]="fc_TrackUserType" [(ngModel)]='selected' required>
+                                                    <mat-option *ngFor="let UserTitle of UserTypeList" [value]="UserTitle.MSISDN">
+                                                        {{UserTitle.UserName}}
+                                                        -
+                                                        {{UserTitle.MSISDN }}                
+                                                      </mat-option>
+                                                  </mat-select>
+                                                </mat-form-field>
+                                                   <div style="font-size: 9px;" >{{selected}}</div> -->
+                                      
+                                  </div>
+              
+                                  <div class="col-md-6">
+                                      <!-- <button mat-raised-button (click)="getData()" class="btn btn-danger pull-right">Load</button> -->
+                                    </div>
+                              </div>
+                          </div>
                       </div>
-                  </div>
               </div>
-          </div>
+      
+              <div class="card ">
+                      <!-- <div class="card-header card-header-danger">
+                          <h4 class="card-title"></h4>
+                      </div> -->
+                      <div class="card-body">
+                          <div class="table-responsive desResp">
+                              <div class="row">
+                                      <div class="col-md-12">
+      
+                                                       <!-- MAP -->
+                                                 
+                                                       <agm-map [latitude]="24.8607" [longitude]="67.0011" [zoom]="6">
+                                      
+                                                          <!-- <agm-direction *ngFor="let dir of objDir; let i = index" 
+                                                          [origin]="dir.origin" 
+                                                          [destination]="dir.destination" 
+                                                          [travelMode] = "dir.travelMode"
+                                                          [renderOptions]="renderOptions" 
+                                                          [markerOptions]="dir.markerOpt"
+                                                          [panel]="myPanel"
+                                                          [infoWindow]="infoWindow"
+                                                          [visible]="dir.visible">
+                                      
+                                       
+                                                      </agm-direction>    -->
+                                                         
+                                                          <!-- <agm-direction [origin]="origin" [destination]="destination">
+                                                         </agm-direction>  -->
+      
+                                                         <!-- <agm-direction [origin]="origin" [destination]="destination">
+                                                          </agm-direction> -->
+                                      
+                                      
+                                                      </agm-map>
+      
+      
+      
+                                      </div>
+      
+      
+                              </div>
+                          </div>
+                      </div>
+              </div>
+        </div>
       </div>
-  </div>
-</div>
+      

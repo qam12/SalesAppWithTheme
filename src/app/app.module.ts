@@ -3,7 +3,7 @@ import {CommonModule} from '@angular/common';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './components/components.module';
 import { AppComponent } from './app.component';
@@ -22,10 +22,8 @@ import { MaterialModule } from './material.module';
 import { AgmJsMarkerClustererModule } from '@agm/js-marker-clusterer';
 import { LoaderComponent } from './loader/loader.component';
 import { LoadercontentComponent } from './loadercontent/loadercontent.component';
-import { LoginComponent } from './login/login.component';
 
-import { AuthService } from './AuthServices/auth.service'
-import { AuthGuard } from './AuthServices/auth.guard';
+
 
 
 
@@ -35,8 +33,7 @@ import { AuthGuard } from './AuthServices/auth.guard';
     AppComponent,
     AdminLayoutComponent,
     LoaderComponent,
-    LoadercontentComponent,
-    LoginComponent
+    LoadercontentComponent
   ],
 
   imports: [
@@ -47,7 +44,7 @@ import { AuthGuard } from './AuthServices/auth.guard';
     RouterModule,
     AppRoutingModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyA4y9znGOIhqwC3d_do5PBiRsqB6iI0Xmg',
+      apiKey: 'AIzaSyAi-byU3m6ShPAV4qchSRqAY7nBoWVUwvA',
     }),
     ReactiveFormsModule,
     MaterialModule,
@@ -57,7 +54,7 @@ import { AuthGuard } from './AuthServices/auth.guard';
     LoadercontentComponent
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
-  providers: [AuthService,AuthGuard],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

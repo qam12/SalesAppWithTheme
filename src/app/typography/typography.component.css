@@ -1,0 +1,640 @@
+
+
+
+.margintopzero{
+	margin-top: 0px !important;
+}
+
+li{
+	cursor: pointer;
+}
+
+.hundred{
+	float: left;
+	width: 100%;
+}
+.bg{
+    background: #F9EECD;
+	margin: 0 !important;
+    padding: 0 !important;
+}
+.container{
+	max-width:1100px;
+	width: 100%;
+	margin: 0 auto;
+	
+}
+
+
+.Cont {
+    float: left;
+    width: 100%;
+}
+
+.Cont .main{
+	margin-left: 9%;
+
+}
+
+.map_g{
+	float: left;
+	width: 100%;
+
+}
+
+.dist_g{
+    float: left;
+    width: 100%;
+    height: 500px;
+    padding: 24px 1px !important;
+}
+.dist_g h4{
+	font-size: 12px;
+	margin-bottom: 4px;
+}
+
+.dist_g p{
+	font-size: 11px;
+	color: #7d7373;
+
+}
+._width{
+    width: 100%;
+}
+
+.fields ul li {
+    float: left;
+    margin-bottom: 8px;
+    font-size: 9px;
+    margin-right: 10px;
+}
+.round_red{
+    border: 0px;
+    background: red;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    font-size: 10px;
+    font-weight: 600;
+}
+.round_gree{
+    background: #249616 !important;
+}
+.round_blue{
+    background: #005aff !important;
+}
+
+
+.tooltip-red{
+    background: #E3342F !important;
+}
+
+
+.fields li button.mat-mini-fab.mat-primary{
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+    line-height: 7px !important;
+}
+.mat-mini-fab .mat-button-wrapper{
+    line-height: 0px;
+}
+
+.dist_g li mat-card{
+	/* padding: 10px !important; */
+	margin-bottom: 10px !important;
+	position: relative;
+}
+
+.dist_g li mat-card:active {
+	background-color: #E3342F;
+	border-color: #fff;
+	box-shadow: 0 5px #666;
+	transform: translateY(4px);
+	color: #fff;
+  }
+
+  /* .dist_g li mat-card:active:before {
+	content: '';
+    display: inline-block;
+    background: url(/assets/sm.png) no-repeat;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 3px;
+    bottom: 0px;
+	right: -17px;    
+	text-align: center;
+    margin: auto;
+  } */
+
+
+/* .dist_g li mat-card:hover {
+    background-color: #fff;
+    border: 1px solid #ff9800;
+    color: #ff9800;
+} */
+
+.WrapCheck {
+    float: left;
+	width: 100%;
+	/* margin-top: 16px;
+	padding-top: 12px; */
+
+}
+/* .WrapCheck span h4{
+	width: 90%;
+	float: left;
+} */
+
+.WrapCheck .inRight {
+    float: left;
+    width: 77%;
+	border-bottom: 1px solid #cecbcb;
+    padding-bottom: 5px;
+}
+
+.WrapCheck .inLeft {
+    float: left;
+    width: 40px;
+    background: #fa6232;		
+    border-radius: 40px;
+    height: 40px;
+	margin-right: 4%;	
+	text-align: center;
+	position: relative;
+}
+.WrapCheck .inLeft > span{
+	position: absolute;
+	color: white;
+    top: 9px;
+    left: 8px;
+}
+.disTit span:last-child {
+	float: right;
+	margin-top: -12px;
+}
+
+.disTit span:first-child {
+	float: left;
+	width: 86%;
+
+}
+.ulG{
+	height: 898px;
+    overflow-y: auto;
+    float: left;
+    width: 100%;
+}
+.ulG > ul > li{
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+
+}
+.Card_dsr > .fields ul li{
+    margin-right: 4px !important;
+}
+
+.lef div{
+	float: left;
+	width: 40px;
+}
+.titleCheck {
+    float: left;
+    width: 100%;
+}
+.titleCheck h6{
+    float: left;
+    padding-left: 10px;
+}
+.titleCheck .mat-checkbox{
+    float: right;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+ .disAd{
+	float: left;
+	width: 97%;
+} 
+.adLef {
+    float: left;
+    width: 80%;
+    font-size: 11px;
+    margin-top: 4px;
+    margin-bottom: 3px;
+}
+
+.adRig {
+    float: right;
+    text-align: center;
+    width: 14%;
+}
+
+.adRig span:first-child {
+    background: #449bdd;
+    width: 35px;
+    height: 35px;
+    border-radius: 35px;
+    text-align: center;
+    font-size: 10px;
+	font-weight: 100;    
+	display: block;
+    color: #fff;
+}
+.adRig span p{
+	color: #fff;
+    padding-top: 5px;
+}
+.adRig span i{
+	font-size: 9px;
+}
+
+.ShopPRo img{
+	width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+
+.comboboxWrap {
+	float: left;
+	width: 100%;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+
+.clascomb{
+    float: left;
+    width: 29%;
+    margin-right: 20px;
+    margin-top: 9px;
+    position: relative;
+
+}
+
+.paddbt_top{
+    padding-bottom: 5px !important;
+    padding-top: 5px !important;
+}
+
+.clascomb .mat-form-field {
+    width: 71%;
+}
+.matCard{
+	box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+	transition: box-shadow 280ms cubic-bezier(.4,0,.2,1);
+    padding: 24px;
+	border-radius: 2px;
+	background: #fff;
+	color: rgba(0,0,0,.87);
+	font-family: Roboto,"Helvetica Neue",sans-serif;
+
+}
+
+.datePic{
+	cursor: pointer;
+    position: absolute;
+    bottom: 19px;
+}
+
+.midWrap{
+	float: left;
+	width: 100%;
+}
+
+
+ul,li{
+	list-style: none;
+}
+.footwrap{
+    float: left;
+    width: 100%;
+    margin-top: 50px;
+    text-align: right;
+}
+
+.DSR_Wrap {
+    float: left;
+	width: 100%;
+}
+
+.DSR_Wrap li {
+    float: left;
+	margin-right: 10px;
+	float: left;
+	margin-right: 10px;
+	
+	background-color: #E3342F;
+    border-color: #e91e63;
+
+    color: #fff;
+    border-radius: 18px;
+    text-align: center;
+    font-size: 13px;
+	padding: 10px;
+	cursor: pointer;
+	box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+	transition: box-shadow 280ms cubic-bezier(.4,0,.2,1), -webkit-box-shadow 280ms cubic-bezier(.4,0,.2,1);
+	font-family: Roboto,"Helvetica Neue",sans-serif;
+	margin-bottom: 8px;
+
+}
+.magrBtm{
+	margin-bottom: 10px;
+}
+
+div.scrollmenu {
+	overflow-x: auto;
+    white-space: nowrap;
+    float: left;
+    width: 100%;
+}
+
+div.scrollmenu .Card_dsr {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    margin-right: 15px;
+    color: #fff;
+    border-radius: 2px;
+    text-align: center;
+    font-size: 13px;
+    padding: 10px;
+    cursor: pointer;
+    -webkit-box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    transition: box-shadow 280ms cubic-bezier(.4,0,.2,1), -webkit-box-shadow 280ms cubic-bezier(.4,0,.2,1);
+    font-family: Roboto,"Helvetica Neue",sans-serif;
+    margin-bottom: 8px;
+    width: 15%;
+	position: relative;
+    border: 1px solid #e0dcdcbf;
+    height: 150px;
+    min-height: 111px;
+
+}
+div.scrollmenu .Card_dsr:active {	
+	/* background-color:#3f51b5; */
+	box-shadow: 0 5px #666;
+	transform: translateY(4px);
+  }
+
+  .ShopPRo {
+    float: left;
+    width: 100%;
+	text-align: center;
+	margin-bottom: 8px;
+
+}
+
+.activ_dsr {
+    float: right;
+    width: 100%;
+    text-align: right;
+}
+
+.ShopTit {
+    float: left;
+    width: 100%;
+    text-align: center;
+    color: #000;
+    font-weight: 500;
+    font-size: 12px;
+}
+/* 
+div.scrollmenu .Card_dsr:hover {
+	background-color: #fff;
+    border: 1px solid#3f51b5;
+	color: #3f51b5;
+} */
+
+/* div.scrollmenu .Card_dsr:hover:before {
+	content: '';
+    display: inline-block;
+    background: url('/assets/dsr.png') no-repeat;
+	width: 50px;
+    height: 50px;
+    position: absolute;
+    top: -14px;
+    bottom: 0px;
+    left: 2px;
+    right: 0px;
+    text-align: center;
+	margin: auto;
+   } */
+
+div.scrollmenu .Card_dsr .img{
+	float: left;
+	text-align: center;
+	background-image: url('/assets/dsr_w.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 100%;
+	height: 50px;
+
+ }
+ div.scrollmenu .det {
+	float: left;
+    width: 100%;
+    text-align: center;
+    color: #878787;
+	margin-top: 3px;
+	font-size: 11px;	
+}
+
+div.scrollmenu::-webkit-scrollbar {
+    width: 2px;
+    height: 7px;
+}
+.form-check, label{
+    font-size: 11px !important;
+}
+ 
+div.scrollmenu::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+div.scrollmenu::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+.desResp{
+    overflow-x: hidden !important;
+}
+
+.modal {
+    float: left;
+    width: 100%;
+}
+.leftinn {
+    float: left;
+    margin-right: 7px;
+}
+.Rightinn {
+    float: right;
+    text-align: left;
+}
+.pj_address {
+    font-size: 10px;
+    color: #878787;
+}
+.pj_shopTitle {
+    font-weight: 800;
+    color: #07a713;
+}
+
+.activ_dsr .adRig{
+    float: left;
+}
+
+.ch_box{
+	float: right;
+	text-align: right;
+}
+
+.comboboxWrap.margintopzero.matCard {
+    background: #FFE5BD
+}
+
+.clascomb button{
+    margin-top: 14px;
+}
+
+.titleDSR{
+    float: left;
+    width: 100%;
+}
+.titleDSR h6{
+    float: left;
+}
+.titleDSR .mat-checkbox{
+    float: right !important;
+}
+.fields{
+    float: left;
+    width: 100%;
+    display: none;
+}
+
+
+.UpdateWrap{
+    border-radius: 2px;
+    background: #fff;
+    color: rgba(0,0,0,.87);
+    font-family: Roboto,"Helvetica Neue",sans-serif;
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.Left_upwrap {
+    float: left;
+    overflow: hidden;
+}
+
+.Rig_upwrap {
+    float: left;
+    width: 60%;
+}
+
+.DSR_illWrap {
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+
+}
+.txt{
+    font-size:9px;
+}
+
+.centerLoader
+{
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+}
+
+.mat-radio-button ~ .mat-radio-button {
+    padding-right: 16px;
+  }
+  /* mat-radio-group .mat-radio-button{
+    background-color: #fff;
+    padding: 4px 16px;
+    margin: 20px 0;
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
+    font-size: 12px;
+    margin: 12px 0 0 0;
+    color: #fa6232;
+    border-radius: 10px;
+} */
+
+.chec_counter{
+    background-color: #fff;
+    padding: 4px 9px;
+    margin: 20px 0;
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
+    font-size: 12px;
+    margin: 12px 0 0 0;
+    color: #fa6232;
+    border-radius: 10px;
+    float: left;
+    margin-right: 10px;
+
+}
+
+.chec_counter span {
+    display: inline-block;
+    color: #005aff;
+    line-height: 19px;
+    font-size: 10px;
+    font-weight: 800;
+    padding: 5px;
+    cursor: pointer;
+}
+.MapBtns {
+    float: left;
+    width: 100%;
+}
+.Viewoption {
+    float: left;
+    width: 100%;
+}
+.dummobx {
+    border: 0px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.36);
+    width: 100%;
+    padding: 11px 0px 6px 0px;
+    margin-bottom: 25px;
+    font-size: 17px;
+}
+
+mat-radio-group.det_btn .mat-radio-button{
+    background-color: #fff;
+    padding: 8px 16px;
+    margin: 20px 0;
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
+    font-size: 15px;
+    color: #fa6232;
+    width: 20%;
+    border-radius: 10px;
+}
+
+
+agm-map {
+    height: 500px;
+  }
+
+

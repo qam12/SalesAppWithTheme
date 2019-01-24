@@ -1,7 +1,7 @@
 import { ElementRef, EventEmitter, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
 import { MouseEvent } from '../map-types';
 import { GoogleMapsAPIWrapper } from '../services/google-maps-api-wrapper';
-import { FullscreenControlOptions, LatLngLiteral, MapTypeControlOptions, PanControlOptions, RotateControlOptions, ScaleControlOptions, StreetViewControlOptions, ZoomControlOptions } from '../services/google-maps-types';
+import { FullscreenControlOptions, LatLngLiteral, MapTypeControlOptions, MapTypeId, PanControlOptions, RotateControlOptions, ScaleControlOptions, StreetViewControlOptions, ZoomControlOptions } from '../services/google-maps-types';
 import { LatLngBounds, LatLngBoundsLiteral, MapTypeStyle } from '../services/google-maps-types';
 /**
  * AgmMap renders a Google Map.
@@ -212,6 +212,10 @@ export declare class AgmMap implements OnChanges, OnInit, OnDestroy {
      */
     boundsChange: EventEmitter<LatLngBounds>;
     /**
+     * This event is fired when the mapTypeId property changes.
+     */
+    mapTypeIdChange: EventEmitter<MapTypeId>;
+    /**
      * This event is fired when the map becomes idle after panning or zooming.
      */
     idle: EventEmitter<void>;
@@ -243,6 +247,7 @@ export declare class AgmMap implements OnChanges, OnInit, OnDestroy {
     private _fitBounds();
     private _handleMapCenterChange();
     private _handleBoundsChange();
+    private _handleMapTypeIdChange();
     private _handleMapZoomChange();
     private _handleIdleEvent();
     private _handleMapMouseEvents();
