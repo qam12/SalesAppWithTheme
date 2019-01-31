@@ -354,20 +354,103 @@
             
                                 <div *ngIf="ShowDetailMap===false">
                                   <agm-marker-cluster imagePath="https://googlemaps.github.io/js-marker-clusterer/images/m">
-                                   
                                     <agm-marker *ngFor="let post of _FilteredPostsArray$ | async; trackBy: trackByShop let i = index" 
-                                    [latitude]="convertStringToNumber(post.Latitude)" [longitude]="convertStringToNumber(post.Longitude)"
-                                    [openInfoWindow]="true" [iconUrl]="post.Status!='N' ? '../assets/img/green-dot.png' : '../assets/img/red-dot.png'">
-                                    
-                                    <agm-info-window>
-                                        <h2>Transaction</h2>
-                                        <div>
-                                            <table>
+                                      [latitude]="convertStringToNumber(post.Latitude)" [longitude]="convertStringToNumber(post.Longitude)"
+                                      [openInfoWindow]="true" [iconUrl]="post.Status!='N' ? '../assets/green-dot.png' : '../assets/red-dot.png'">
+                                      <agm-info-window>
+                                          <h2>Transaction</h2>
+                                          <div>
+                                              <table>
+                                                  <tr>
+                                                    <th>Address</th>
+                                                    <td>{{post.Address}}</td>
+                                                  </tr>
+                
+                                                  <tr>
+                                                    <th>
+                                                      Quantity
+                                                    </th>
+                                                    <td>
+                                                      {{post.Quantity}}
+                                                    </td>
+                                                  </tr>
+                
+                                                  <tr>
+                                                    <th>
+                                                      Sales Weight
+                                                    </th>
+                                                    <td>
+                                                      {{post.SalesWeight}}
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <th>
+                                                      Sales Ton
+                                                    </th>
+                                                    <td>
+                                                      {{post.SalesTonnage}}
+                                                    </td>
+                                                  </tr>
+                
+                                                  <tr>
+                                                    <th>
+                                                      Net Amount
+                                                    </th>
+                                                    <td>
+                                                      {{post.NetAmount}}
+                                                    </td>
+                                                  </tr>
+                
+                                                  <tr>
+                                                    <th>
+                                                      Sales Brand
+                                                    </th>
+                                                    <td>
+                                                      {{post.Brand}}
+                                                    </td>
+                                                  </tr>
+                
+                                                  <tr>
+                                                    <th>
+                                                      Invoice No.
+                                                    </th>
+                                                    <td>
+                                                      {{post.InvoiceNo1}}
+                                                    </td>
+                                                  </tr>
+                
+                                                </table>
+                                          </div>
+
+                                        <!-- <div class="modal">
+                                        <div class="leftinn">
+                                            <img src="../assets/img/shops.png">
+                                          </div> 
+                                          <div class="Rightinn">
+                                            <div class="pj_shopTitle">{{post.ShopTitle}}</div>
+                                            <div class="pj_address">
+                                              <table>
                                                 <tr>
                                                   <th>Address</th>
-                                                  <td >{{post.Address}}</td>
+                                                  <td class="txt">{{post.Address}}</td>
                                                 </tr>
-              
+            
+                                                <tr>
+                                                  <th>
+                                                    SalesTonnage
+                                                  </th>
+                                                  <td>
+                                                    {{post.SalesTonnage}}
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <th>
+                                                    NetAmount
+                                                  </th>
+                                                  <td>
+                                                    {{post.NetAmount}}
+                                                  </td>
+                                                </tr>
                                                 <tr>
                                                   <th>
                                                     Quantity
@@ -376,130 +459,41 @@
                                                     {{post.Quantity}}
                                                   </td>
                                                 </tr>
-              
                                                 <tr>
                                                   <th>
-                                                    Sales Weight
-                                                  </th>
-                                                  <td>
-                                                    {{post.SalesWeight}}
-                                                  </td>
-                                                </tr>
-                                                <tr>
-                                                  <th>
-                                                    Sales Ton
-                                                  </th>
-                                                  <td>
-                                                    {{post.SalesTonnage}}
-                                                  </td>
-                                                </tr>
-              
-                                                <tr>
-                                                  <th>
-                                                    Net Amount
-                                                  </th>
-                                                  <td>
-                                                    {{post.NetAmount}}
-                                                  </td>
-                                                </tr>
-              
-                                                <tr>
-                                                  <th>
-                                                    Sales Brand
-                                                  </th>
-                                                  <td>
-                                                    {{post.Brand}}
-                                                  </td>
-                                                </tr>
-              
-                                                <tr>
-                                                  <th>
-                                                    Invoice No.
+                                                    InvoiceNo1
                                                   </th>
                                                   <td>
                                                     {{post.InvoiceNo1}}
                                                   </td>
                                                 </tr>
-              
+                                                <tr>
+                                                  <th>
+                                                    InvoiceNo2
+                                                  </th>
+                                                  <td>
+                                                    {{post.InvoiceNo2}}
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <th>
+                                                    InvoiceNo3
+                                                  </th>
+                                                  <td>
+                                                    {{post.InvoiceNo3}}
+                                                  </td>
+                                                </tr>
                                               </table>
-                                        </div>
-
-                                      <!-- <div class="modal">
-                                        <div class="leftinn">
-                                          <img src="../assets/img/shops.png">
-                                        </div>
-                                        <div class="Rightinn">
-                                          <div class="pj_shopTitle">{{post.ShopTitle}}</div>
-                                          <div class="pj_address">
-                                            <table>
-                                              <tr>
-                                                <th>Address</th>
-                                                <td class="txt">{{post.Address}}</td>
-                                              </tr>
+                                            </div>
             
-                                              <tr>
-                                                <th>
-                                                  Quantity
-                                                </th>
-                                                <td>
-                                                  {{post.Quantity}}
-                                                </td>
-                                              </tr>
-            
-                                              <tr>
-                                                <th>
-                                                  Sales Weight
-                                                </th>
-                                                <td>
-                                                  {{post.SalesWeight}}
-                                                </td>
-                                              </tr>
-                                              <tr>
-                                                <th>
-                                                  Sales Ton
-                                                </th>
-                                                <td>
-                                                  {{post.SalesTonnage}}
-                                                </td>
-                                              </tr>
-            
-                                              <tr>
-                                                <th>
-                                                  Net Amount
-                                                </th>
-                                                <td>
-                                                  {{post.NetAmount}}
-                                                </td>
-                                              </tr>
-            
-                                              <tr>
-                                                <th>
-                                                  Sales Brand
-                                                </th>
-                                                <td>
-                                                  {{post.Brand}}
-                                                </td>
-                                              </tr>
-            
-                                              <tr>
-                                                <th>
-                                                  Invoice No.
-                                                </th>
-                                                <td>
-                                                  {{post.InvoiceNo1}}
-                                                </td>
-                                              </tr>
-            
-                                            </table>
                                           </div>
             
-                                        </div>
             
-                                      </div> -->
-                                    </agm-info-window>
             
-                                  </agm-marker>
-                                    
+                                        </div> -->
+                                      </agm-info-window>
+            
+                                    </agm-marker>
                                   </agm-marker-cluster>
                                 </div>
                               </agm-map>

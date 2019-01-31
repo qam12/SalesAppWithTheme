@@ -85,10 +85,11 @@ export class TypographyComponent implements OnInit {
     (
       resultArray => {
         
-        this._FilteredPostsArray = resultArray.splice(1,300);
-        GlobalResources._MainPJPDataArray = resultArray.splice(1,300);
+        this._FilteredPostsArray = resultArray;
+        GlobalResources._MainPJPDataArray = resultArray;
         this.ShowTotalValues();
         this._FilteredPostsArray$ = Observable.of(this._FilteredPostsArray);
+          
         this.getDistinctDistributors();
         this.getDistinctDsr();
         this._loading = true;
@@ -244,7 +245,7 @@ setFilterMode(strFilterString:any){
  
  MapMode(LoadDetailMap:boolean){
   this.ShowDetailMap = LoadDetailMap;
- }
+}
 
 search(query: string){
         this.DistributorList = (query) ? this.DistributorList.filter(DistributorList => 
