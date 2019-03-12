@@ -20,9 +20,9 @@ PC: Internet access and access to Web Application i.e. smart sales monitoring ap
 User: A user should have access to both application whether web-based or android based.
 
 # HARDWARE REQUIREMENTS
-•	Android Devices - for android application. 
-•	Personal Computer – for web application. 
-•	Server – for storage and domain access.
+1	Android Devices - for android application. 
+2	Personal Computer – for web application. 
+3	Server – for storage and domain access.
 
 # SOFTWARE REQUIREMENTS
 For PC user need access to internet and browser installed on system but for android devices Application should be downloaded.
@@ -31,19 +31,30 @@ For PC user need access to internet and browser installed on system but for andr
 List of tools and technologies for development are as follows:
 
 # HARDWARE
-•	Android Device – For Android Application
-•	Personal Computer – For Desktop based web application
+1	Android Device – For Android Application
+2	Personal Computer – For Desktop based web application
 
 # SOFTWARE
-•	Visual Studio Code
-•	Google Firebase
-•	Angular 5
-•	Node.js
-•	TypeScript
-•	Photoshop
-•	SQL Server
-•	Balsamiq
+1	Visual Studio Code
+2	Google Firebase
+3	Angular 5
+4	Node.js
+5	TypeScript
+6	Photoshop
+7	SQL Server
+8	Balsamiq
 
 # NEED
 The need of sales monitoring system is to provide the desired level of services along with inspecting a real time data and minimizing the huge amount of human effort been made throughout the entire sale services.
+
+# KEY FEATURES
+1	Productive Shop Information
+2	Online Shops Locations
+3	Data Monitoring
+4	Data Comparison
+5	Google Map Clustering
+
+# PROBLEM DESCRIPTION
+Management are concerned about data comparison, time and human effort being made to get the job done such problems are faced by every organization hence our Mission is to get rid of management problems and our application provides complete solution to these problems. And which is why it differs from traditional sales monitoring system in which DSR would not book order or visit shops in order to detain sales therefore, company does not meet desired targeted sales.
+
 
