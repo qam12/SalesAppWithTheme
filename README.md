@@ -16,8 +16,8 @@ Project is targeted for sales especially if linked ¬with distributor’s repres
 
 # CONVENTIONS FOR DOCUMENT
 Android Device: Smart sales monitoring application downloaded and installed along with internet access.
-PC: Internet access and access to Web Application i.e. smart sales monitoring application.
-User: A user should have access to both application whether web-based or android based.
+* PC: Internet access and access to Web Application i.e. smart sales monitoring application.
+* User: A user should have access to both application whether web-based or android based.
 
 # HARDWARE REQUIREMENTS
 *	Android Devices - for android application. 
