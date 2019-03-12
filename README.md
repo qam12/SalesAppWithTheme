@@ -20,9 +20,9 @@ PC: Internet access and access to Web Application i.e. smart sales monitoring ap
 User: A user should have access to both application whether web-based or android based.
 
 # HARDWARE REQUIREMENTS
-1.	Android Devices - for android application. 
-2.	Personal Computer – for web application. 
-3.	Server – for storage and domain access.
+*	Android Devices - for android application. 
+*	Personal Computer – for web application. 
+*	Server – for storage and domain access.
 
 # SOFTWARE REQUIREMENTS
 For PC user need access to internet and browser installed on system but for android devices Application should be downloaded.
@@ -30,11 +30,11 @@ For PC user need access to internet and browser installed on system but for andr
 # TOOLS & TECHNOLOGIES
 List of tools and technologies for development are as follows:
 
-# HARDWARE
+## HARDWARE
 1.	Android Device – For Android Application
 2.	Personal Computer – For Desktop based web application
 
-# SOFTWARE
+## SOFTWARE
 1.	Visual Studio Code
 2.	Google Firebase
 3.	Angular 5
